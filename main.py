@@ -103,7 +103,7 @@ async def on_message(message):
     if message.content == 'member list':
         members = '\n - '.join([member.name for member in message.author.guild.members])
         count = len(message.author.guild.members)
-        await message.channel.send(f'```{count} members in this guild: \n - s{members}```')
+        await message.channel.send(f'```{count} members in this guild: \n - {members}```')
         print(f'members listed by {message.author}')
 
 
